@@ -9,33 +9,79 @@
 
   <body>
     <div class="container">
-      <p class="output">1 + 1 = 5</p>
+      <p class="output"></p>
       <div class="row">
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="secondary-btn">x</button>
+        <button onclick="
+          addCalculation('7');
+        ">7</button>
+
+        <button onclick="
+          addCalculation('8');
+        ">8</button>
+
+        <button onclick="
+          addCalculation('9');       
+        ">9</button>
+
+        <button class="secondary-btn" onclick="
+          addCalculation('*');
+        ">*</button>
       </div>
 
       <div class="row">
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button class="secondary-btn">-</button>
+        <button onclick="
+          addCalculation('4');
+        ">4</button>
+
+        <button onclick="
+          addCalculation('5');
+        ">5</button>
+
+        <button onclick="
+          addCalculation('6');
+        ">6</button>
+
+        <button class="secondary-btn" onclick="
+          addCalculation('-');
+        ">-</button>
       </div>
 
       <div class="row">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button class="secondary-btn">+</button>
+        <button onclick="
+          addCalculation('1'); 
+        ">1</button>
+
+        <button onclick="
+          addCalculation('2');
+        ">2</button>
+
+        <button onclick="
+          addCalculation('3');
+        ">3</button>
+
+        <button class="secondary-btn" onclick="
+          addCalculation('+');
+        ">+</button>
       </div>
 
       <div class="row">
-        <button>0</button>
-        <button>.</button>
-        <button>:</button>
-        <button class="secondary-btn">=</button>
+        <button onclick="
+          addCalculation('0');
+        ">0</button>
+
+        <button onclick="
+          addCalculation('.');
+        ">.</button>
+
+        <button onclick="
+          addCalculation('/');
+        ">/</button>
+
+        <button class="secondary-btn" onclick="
+          const calculate = eval(calculation);
+          calculation = calculate;
+          output.innerHTML = calculate;
+        ">=</button>
       </div>
     </div>
     <script src="script.js"></script>
