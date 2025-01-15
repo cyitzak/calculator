@@ -78,8 +78,14 @@
         ">/</button>
 
         <button class="secondary-btn" onclick="
+          // Evaluate the calculation from string into real operation
+          // Store it to variable calculate, to save the value
           const calculate = eval(calculation);
+
+          // Change the calculation value to calculate value
           calculation = calculate;
+
+          // Show the calculate value to output.
           output.innerHTML = calculate;
         ">=</button>
       </div>
